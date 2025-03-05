@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name = "btnpadding">15sp</dimen>
+    <dimen name="btnmargin">15sp</dimen>
+    <dimen name="heading">25sp</dimen>
+    <dimen name="headingmargin">40sp</dimen>
+    <dimen name="textboxpadding">20sp</dimen>
+    <dimen name="resems">30</dimen>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/calbg"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".morebtn">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Calculations"
+        android:textStyle="bold"
+        android:textSize="@dimen/heading"
+        android:fontFamily="@string/headingfont"
+        android:layout_margin="@dimen/headingmargin"
+        android:background="@drawable/textview_box"
+        android:padding="20sp"
+        android:backgroundTint="@color/headbg"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybtn"
+            android:id="@+id/btnsq"
+            android:text="Square"
+            android:padding = "@dimen/btnpadding"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btncb"
+            android:text="Cube"
+            android:background="@drawable/mybtn"
+            android:padding="@dimen/btnpadding"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/btnmargin">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybtn"
+            android:id="@+id/btnsqrt"
+            android:text="Square Root"
+            android:padding = "@dimen/btnpadding"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btncbrt"
+            android:text="Cube Root"
+            android:background="@drawable/mybtn"
+            android:padding="@dimen/btnpadding"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybtn"
+            android:id="@+id/btnprime"
+            android:text="Prime"
+            android:padding = "@dimen/btnpadding"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnfibo"
+            android:text="Fibonacci"
+            android:background="@drawable/mybtn"
+            android:padding="@dimen/btnpadding"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/btnmargin">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnexp"
+            android:text="Exponent"
+            android:background="@drawable/mybtn"
+            android:padding="@dimen/btnpadding"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybtn"
+            android:id="@+id/btnotp"
+            android:text="OTP"
+            android:padding = "@dimen/btnpadding"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80sp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybtn"
+            android:id="@+id/backhome"
+            android:text="BACK"
+            android:padding = "@dimen/btnpadding"/>
+
+    </LinearLayout>
+</LinearLayout>

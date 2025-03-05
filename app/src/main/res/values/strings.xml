@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">caldroid</string>
+    <string name="headingfont">cursive</string>
 </resources>

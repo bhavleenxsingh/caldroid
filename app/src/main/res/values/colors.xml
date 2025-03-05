@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name = "calbg">#E7CDB4</color>
+    <color name="headbg">#EDE5DD</color>
+    <color name="btn">#2772AF</color>
 </resources>

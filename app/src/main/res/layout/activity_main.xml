@@ -6,7 +6,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_margin="15sp"
     android:gravity="center"
     android:background="#E7CDB4"
     android:layout_height="match_parent"
@@ -28,7 +27,7 @@
         android:ems="15"
         android:hint="Enter First Number"
         android:id="@+id/firstno"
-        android:paddingLeft="15sp"
+        android:paddingLeft="@dimen/btnpadding"
         android:background="@drawable/textview_box"
         android:inputType="number"
         />
@@ -37,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:paddingLeft="15sp"
+        android:paddingLeft="@dimen/btnpadding"
         android:background="@drawable/textview_box"
         android:hint="Enter Second Number"
         android:id="@+id/secondno"
@@ -54,21 +53,21 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15sp"
-                android:backgroundTint="#2772AF"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
                 android:text="+"
                 android:textSize="25sp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnsub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15sp"
-                android:backgroundTint="#2772AF"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
                 android:text="-"
                 android:textSize="25sp" />
 
@@ -80,21 +79,21 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnmul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15sp"
-                android:backgroundTint="#2772AF"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
                 android:text="*"
                 android:textSize="25sp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btndiv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15sp"
-                android:backgroundTint="#2772AF"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
                 android:text="/"
                 android:textSize="25sp" />
 
@@ -103,16 +102,25 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnmod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
+                android:text="Mod"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnmore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15sp"
-                android:backgroundTint="#2772AF"
+                android:layout_margin="@dimen/btnmargin"
+                android:background="@drawable/mybtn"
                 android:text="More"
-                android:textSize="25sp" />
+                android:textSize="17sp" />
 
         </LinearLayout>
     </LinearLayout>
@@ -121,12 +129,12 @@
         android:layout_height="50sp"
         android:id="@+id/resulttext"
         android:ems="30"
-        android:paddingLeft="15sp"
-        android:paddingTop="5sp"
+        android:paddingLeft="@dimen/btnpadding"
+        android:paddingTop="10sp"
         android:hint="Result"
         android:background="@drawable/textview_box"
         android:layout_marginHorizontal="30sp"
         android:layout_marginTop="50sp"
-        android:textSize="25sp"
+        android:textSize="20sp"
         />
 </LinearLayout>
