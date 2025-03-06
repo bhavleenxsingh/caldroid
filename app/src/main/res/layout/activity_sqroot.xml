@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/calbg"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".square">
+    tools:context=".sqroot"
+    android:orientation="vertical"
+    android:background="@color/calbg"
+    android:gravity="center"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,60 +26,56 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Square"
-        android:padding="@dimen/btnpadding"
-        android:textSize="@dimen/heading"
         android:background="@drawable/textview_box"
+        android:textSize="@dimen/heading"
+        android:text="Square Root"
         android:fontFamily="@string/headingfont"
         android:textStyle="bold"
-        />
+        android:padding="@dimen/textboxpadding"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
         android:hint="Enter Number..."
         android:background="@drawable/textview_box"
-        android:paddingLeft="@dimen/textboxpadding"
-        android:id="@+id/sqno"
-        />
+        android:ems="30"
+        android:layout_margin="@dimen/textboxpadding"
+        android:padding="@dimen/textboxpadding"
+        android:id="@+id/sqrtno"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/btnmargin"
         android:background="@drawable/mybtn"
-        android:text="Square"
-        android:id="@+id/sqbtn"/>
+        android:text="GO !"
+        android:id="@+id/sqrtbtn"
+        android:layout_marginTop="@dimen/btnmargin"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sqres"
-        android:hint="Result"
         android:background="@drawable/textview_box"
-        android:ems="80"
-        android:paddingLeft="@dimen/btnpadding"
-        android:paddingTop="10sp"
-        android:layout_marginHorizontal="30sp"
-
-        android:textSize="20sp"/>
+        android:hint="Result"
+        android:textSize="20sp"
+        android:padding="@dimen/textboxpadding"
+        android:layout_margin="@dimen/textboxpadding"
+        android:ems="30"
+        android:id="@+id/sqrtres"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="back"
+        android:layout_margin="@dimen/btnmargin"
         android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqbackbtn"/>
+        android:id="@+id/sqrtbackbtn"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="home"
+        android:layout_margin="@dimen/btnmargin"
         android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqhome"/>
-
+        android:id="@+id/sqrthomebtn"/>
 
 </LinearLayout>

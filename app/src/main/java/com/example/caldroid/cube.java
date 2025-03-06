@@ -6,12 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.text.DecimalFormat;
 
 public class cube extends AppCompatActivity {
 
@@ -41,10 +44,20 @@ public class cube extends AppCompatActivity {
         cubebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                no = Integer.parseInt(cubeno.getText().toString());
-                res = no * no;
-                cuberes.setText(res + " is the cube of " + no);
-            }
+                try {
+                    no = Integer.parseInt(cubeno.getText().toString());
+                    res = no * no;
+                    DecimalFormat decfor = new DecimalFormat("##,##,###");
+                    String formatres, formatno;
+                    formatno = decfor.format(no);
+                    formatres = decfor.format(res);
+                    cuberes.setText(formatres + " is the cube of " + formatno);
+                }
+                catch(Exception e){
+                    Toast.makeText(cube.this, "Please Enter a Valid Number !", Toast.LENGTH_LONG).show();
+                }
+                }
+
         });
 
         cubebackbtn.setOnClickListener(new View.OnClickListener() {

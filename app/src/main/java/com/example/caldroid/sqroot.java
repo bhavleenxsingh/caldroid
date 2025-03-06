@@ -16,55 +16,57 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.text.DecimalFormat;
 
-public class square extends AppCompatActivity {
-    Button sqbtn, sqbackbtn, sqhome;
-    EditText sqno;
-    TextView sqres;
-    int sq, res;
+public class sqroot extends AppCompatActivity {
+Button sqrtbtn, sqrtbackbtn, sqrthomebtn;
+EditText sqrtno;
+TextView sqrtres;
+double no, res;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_square);
+        setContentView(R.layout.activity_sqroot);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        sqbtn = findViewById(R.id.sqbtn);
-        sqbackbtn = findViewById(R.id.sqbackbtn);
-        sqno = findViewById(R.id.sqno);
-        sqhome = findViewById(R.id.sqhome);
-        sqres = findViewById(R.id.sqres);
+        sqrtbtn = findViewById(R.id.sqrtbtn);
+        sqrtbackbtn = findViewById(R.id.sqrtbackbtn);
+        sqrthomebtn = findViewById(R.id.sqrthomebtn);
+        sqrtno = findViewById(R.id.sqrtno);
+        sqrtres = findViewById(R.id.sqrtres);
 
-        Intent intentsqback = new Intent(square.this, morebtn.class);
-        Intent intentsqhome = new Intent(square.this, MainActivity.class);
-        sqbtn.setOnClickListener(new View.OnClickListener() {
+        Intent intentsqrtback = new Intent(sqroot.this, morebtn.class);
+        Intent intentsqrthome = new Intent(sqroot.this, MainActivity.class);
+
+        sqrtbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    int sq = Integer.parseInt(sqno.getText().toString());
-                    int res = sq * sq;
-                    DecimalFormat decfor = new DecimalFormat("##,##,###");
+                    no = Double.parseDouble(sqrtno.getText().toString());
+                    res = Math.sqrt(no);
+                    DecimalFormat decfor = new DecimalFormat("##,##,###.####");
                     String formatres = decfor.format(res);
-                    sqres.setText(formatres + " is the square of " + sq);
+                    sqrtres.setText(formatres + " is the square root of " + no);
                 }
                 catch (Exception e){
-                    Toast.makeText(square.this, "Please Enter a Valid Number !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(sqroot.this, "Please Enter a Valid Number !", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        sqbackbtn.setOnClickListener(new View.OnClickListener() {
+        sqrtbackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intentsqback);
+                startActivity(intentsqrtback);
             }
         });
-        sqhome.setOnClickListener(new View.OnClickListener() {
+
+        sqrthomebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intentsqhome);
+                startActivity(intentsqrthome);
             }
         });
     }

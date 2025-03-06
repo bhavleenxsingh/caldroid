@@ -10,16 +10,32 @@
     android:background="#E7CDB4"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/caltoolbar"/>
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/caltoolbar"-->
+<!--        android:textAlignment="center"-->
+<!--        and-->
+<!--        />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CalDroid"
+        android:layout_margin="20sp"
+        android:background="@drawable/textview_box"
+        android:padding="@dimen/textboxpadding"
+        android:textSize="35sp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -105,15 +121,6 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnmod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/btnmargin"
-                android:background="@drawable/mybtn"
-                android:text="Mod"
-                android:textSize="17sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnmore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -128,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50sp"
         android:id="@+id/resulttext"
-        android:ems="30"
+        android:ems="80"
         android:paddingLeft="@dimen/btnpadding"
         android:paddingTop="10sp"
         android:hint="Result"

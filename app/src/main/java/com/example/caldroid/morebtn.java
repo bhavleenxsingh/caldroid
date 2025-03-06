@@ -27,14 +27,17 @@ Button btnsq, btncb, btnsqrt, btncbrt, btnprime, btnfibo, btnexp, btnotp, backho
         btncb = findViewById(R.id.btncb);
         btnsqrt = findViewById(R.id.btnsqrt);
         btncbrt = findViewById(R.id.btncbrt);
-        btnprime = findViewById(R.id.btnprime);
-        btnfibo = findViewById(R.id.btnfibo);
         btnexp = findViewById(R.id.btnexp);
-        btnotp = findViewById(R.id.btnotp);
         backhome = findViewById(R.id.backhome);
+
         Intent intentbackhome = new Intent(morebtn.this, MainActivity.class);
         Intent intentsq = new Intent(morebtn.this, square.class);
         Intent intentcube = new Intent(morebtn.this, cube.class);
+        Intent intentsqrt = new Intent(morebtn.this, sqroot.class);
+        Intent intentcbrt = new Intent(morebtn.this, cbrt.class);
+        Intent intentexp = new Intent(morebtn.this, exp.class);
+
+
         backhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +57,30 @@ Button btnsq, btncb, btnsqrt, btncbrt, btnprime, btnfibo, btnexp, btnotp, backho
                 startActivity(intentcube);
             }
         });
+
+        btnsqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentsqrt);
+            }
+        });
+
+        btncbrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentcbrt);
+            }
+        });
+
+        btnexp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentexp);
+            }
+        });
+
+
+
 
     }
 }

@@ -6,12 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 EditText firstno, secondno;
@@ -44,42 +47,71 @@ int intresult;
 btnadd.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        try{
         double first = Double.parseDouble(firstno.getText().toString());
         double second = Double.parseDouble((secondno.getText().toString()));
     result = first + second;
         intresult = ((int) result);
-    resulttext.setText(intresult + " is the sum.");
+        DecimalFormat decfor = new DecimalFormat("##,##,###");
+        String formatres = decfor.format(intresult);
+    resulttext.setText(formatres + " is the sum.");}
+
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Please Enter a Valid Number !", Toast.LENGTH_LONG).show();
+        }
     }
 });
 
 btnsub.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        double first = Double.parseDouble(firstno.getText().toString());
-        double second = Double.parseDouble((secondno.getText().toString()));
-        result = first - second;
-        intresult = ((int) result);
-        resulttext.setText(intresult + " is the difference.");
+        try {
+            double first = Double.parseDouble(firstno.getText().toString());
+            double second = Double.parseDouble((secondno.getText().toString()));
+            result = first - second;
+            intresult = ((int) result);
+            DecimalFormat decfor = new DecimalFormat("##,##,##,###");
+            String formatres = decfor.format(intresult);
+            resulttext.setText(formatres + " is the difference.");
+        }
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Please Enter a Valid Number !", Toast.LENGTH_LONG).show();
+        }
+
     }
 });
 
 btnmul.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        double first = Double.parseDouble(firstno.getText().toString());
-        double second = Double.parseDouble((secondno.getText().toString()));
-        result = first * second;
-        resulttext.setText(result + " is the product.");
+        try {
+            double first = Double.parseDouble(firstno.getText().toString());
+            double second = Double.parseDouble((secondno.getText().toString()));
+            result = first * second;
+            DecimalFormat decfor = new DecimalFormat("##,##,###");
+            String formatres = decfor.format(result);
+            resulttext.setText(formatres + " is the product.");
+        }
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Please Enter a Valid Number !", Toast.LENGTH_LONG).show();
+        }
     }
 });
 
 btndiv.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        double first = Double.parseDouble(firstno.getText().toString());
-        double second = Double.parseDouble((secondno.getText().toString()));
-        result = first / second;
-        resulttext.setText(result + " is the result.");
+        try {
+            double first = Double.parseDouble(firstno.getText().toString());
+            double second = Double.parseDouble((secondno.getText().toString()));
+            result = first / second;
+            DecimalFormat decfor = new DecimalFormat("##,##,###.###");
+            String formatres = decfor.format(result);
+            resulttext.setText(formatres + " is the result.");
+        }
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Please Enter a Valid Number !", Toast.LENGTH_SHORT).show();
+        }
     }
 });
 

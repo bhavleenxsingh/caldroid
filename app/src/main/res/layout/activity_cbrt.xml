@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/calbg"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cbrt"
+    android:background="@color/calbg"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
-    tools:context=".square">
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,60 +26,65 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Square"
-        android:padding="@dimen/btnpadding"
-        android:textSize="@dimen/heading"
         android:background="@drawable/textview_box"
+        android:text="Cube Root"
+        android:textSize="@dimen/heading"
         android:fontFamily="@string/headingfont"
+        android:padding="@dimen/textboxpadding"
         android:textStyle="bold"
         />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
         android:hint="Enter Number..."
         android:background="@drawable/textview_box"
-        android:paddingLeft="@dimen/textboxpadding"
-        android:id="@+id/sqno"
+        android:padding="@dimen/textboxpadding"
+        android:ems="12"
+        android:id="@+id/cbrtno"
         />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/btnmargin"
+        android:text="Cube Root"
         android:background="@drawable/mybtn"
-        android:text="Square"
-        android:id="@+id/sqbtn"/>
-
+        android:padding="@dimen/btnmargin"
+        android:layout_margin="@dimen/btnmargin"
+        android:id="@+id/cbrtbtn"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sqres"
-        android:hint="Result"
+        android:ems="30"
         android:background="@drawable/textview_box"
-        android:ems="80"
-        android:paddingLeft="@dimen/btnpadding"
-        android:paddingTop="10sp"
-        android:layout_marginHorizontal="30sp"
-
-        android:textSize="20sp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="back"
-        android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqbackbtn"/>
+        android:padding="@dimen/textboxpadding"
+        android:layout_margin="@dimen/textboxpadding"
+        android:hint="Result"
+        android:textSize="20sp"
+        android:id="@+id/cbrtres"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home"
         android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqhome"/>
+        android:text="Back"
+        android:layout_margin="@dimen/btnmargin"
+        android:id="@+id/cbrtbackbtn"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybtn"
+        android:text="Home"
+        android:layout_margin="@dimen/btnmargin"
+        android:padding="@dimen/btnmargin"
+        android:id="@+id/cbrthomebtn"
+        />
+
+
 
 
 </LinearLayout>

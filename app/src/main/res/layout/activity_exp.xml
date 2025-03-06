@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/calbg"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".square">
+    tools:context=".exp"
+    android:orientation="vertical"
+    android:background="@color/calbg"
+    android:gravity="center"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,60 +27,76 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Square"
-        android:padding="@dimen/btnpadding"
-        android:textSize="@dimen/heading"
         android:background="@drawable/textview_box"
+        android:text="Exponent"
         android:fontFamily="@string/headingfont"
+        android:textSize="@dimen/heading"
+        android:padding="@dimen/textboxpadding"
         android:textStyle="bold"
         />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
-        android:hint="Enter Number..."
         android:background="@drawable/textview_box"
-        android:paddingLeft="@dimen/textboxpadding"
-        android:id="@+id/sqno"
+        android:hint="Enter Number..."
+        android:padding="@dimen/textboxpadding"
+        android:ems="12"
+        android:id="@+id/expno"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:background="@drawable/textview_box"
+        android:hint="Enter Exponent..."
+        android:padding="@dimen/textboxpadding"
+        android:inputType="number"
+        android:id="@+id/exppower"
         />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/btnmargin"
+        android:text="Calculate"
         android:background="@drawable/mybtn"
-        android:text="Square"
-        android:id="@+id/sqbtn"/>
+        android:padding="@dimen/btnpadding"
+        android:layout_margin="@dimen/btnmargin"
+        android:id="@+id/expbtn"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sqres"
-        android:hint="Result"
         android:background="@drawable/textview_box"
-        android:ems="80"
-        android:paddingLeft="@dimen/btnpadding"
-        android:paddingTop="10sp"
-        android:layout_marginHorizontal="30sp"
-
-        android:textSize="20sp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="back"
-        android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqbackbtn"/>
+        android:ems="15"
+        android:padding="@dimen/textboxpadding"
+        android:hint="Result"
+        android:textSize="20sp"
+        android:id="@+id/expres"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home"
         android:background="@drawable/mybtn"
-        android:layout_marginTop="@dimen/btnmargin"
-        android:id="@+id/sqhome"/>
+        android:text="Back"
+        android:id="@+id/expback"
+        android:padding="@dimen/btnpadding"
+        android:layout_margin="@dimen/btnpadding"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybtn"
+        android:text="Home"
+        android:padding="@dimen/btnpadding"
+        android:layout_margin="@dimen/btnpadding"
+        android:id="@+id/exphome"
+        />
 
 
 </LinearLayout>
