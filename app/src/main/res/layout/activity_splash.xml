@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/headbg"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".splash">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/btn"
+        android:text="CalDroid"
+        android:layout_marginBottom="20sp"
+        android:fontFamily="cursive"
+        android:textSize="65sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn"
+        android:fontFamily="serif-monospace"
+        android:layout_marginBottom="10sp"
+        android:text="An Advanced Calculator"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn"
+        android:fontFamily="serif-monospace"
+        android:text="for your Android !"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By : Bhavleen Singh"
+        android:textColor="@color/btn"
+        android:textSize="17sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:layout_marginTop="150sp"
+        />
+
+
+
+</LinearLayout>
